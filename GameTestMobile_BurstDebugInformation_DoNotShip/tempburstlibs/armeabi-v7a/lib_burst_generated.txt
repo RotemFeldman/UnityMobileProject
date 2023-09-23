@@ -8,6 +8,7 @@ Library: C:\Users\User\Desktop\DBProject\UnityMobileProject\Temp\BurstOutput\tem
 --float-precision=Standard
 --target-framework=NetFramework
 --assembly-defines=UnityEngine;
+--assembly-defines=Assembly-CSharp-firstpass;
 --assembly-defines=Assembly-CSharp;
 --assembly-defines=Unity.2D.IK.Runtime;
 --assembly-defines=Unity.VisualScripting.Flow;
@@ -32,6 +33,7 @@ Library: C:\Users\User\Desktop\DBProject\UnityMobileProject\Temp\BurstOutput\tem
 --assembly-defines=Unity.Collections.LowLevel.ILSupport;
 --assembly-defines=Unity.VisualScripting.Antlr3.Runtime;
 --assembly-defines=Unity.Burst.Unsafe;
+--assembly-defines=DOTween;
 --assembly-defines=System.Runtime;
 --assembly-defines=netstandard;
 --assembly-defines=Mono.Security;
