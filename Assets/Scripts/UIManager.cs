@@ -15,6 +15,12 @@ public class UIManager : MonoBehaviour
         ThemeSelectPanel.SetActive(true);
     }
 
+    public void MainMenu()
+    {
+        ThemeSelectPanel.SetActive(false);
+        MainMenuPanel.SetActive(true);
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);
