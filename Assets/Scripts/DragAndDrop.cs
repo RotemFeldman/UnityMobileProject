@@ -17,11 +17,14 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        if (GamePause.IsPaused)
+            return;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (GamePause.IsPaused)
+            return;
         if (_canDrag)
         {
             if (eventData.pointerDrag.transform.parent.name == "Circles")
@@ -37,6 +40,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       
+        if (GamePause.IsPaused)
+            return;
     }
 }
