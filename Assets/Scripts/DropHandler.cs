@@ -10,6 +10,7 @@ public class DropHandler : MonoBehaviour, IDropHandler
     {
         if (GamePause.IsPaused)
             return;
+
         var droppedObj = eventData.pointerDrag;
 
         if (droppedObj.CompareTag("Option"))
