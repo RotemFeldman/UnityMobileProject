@@ -11,7 +11,7 @@ public class GamePause : MonoBehaviour
     { 
         IsPaused = isEnable;
 
-        if (pauseMenu.active)
+        if (pauseMenu.activeSelf)
             pauseMenu.SetActive(false);
         else
             pauseMenu.SetActive(true);
