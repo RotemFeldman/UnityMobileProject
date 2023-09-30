@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!1 &258123107
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +289,7 @@ GameObject:
   - component: {fileID: 258123109}
   m_Layer: 5
   m_Name: Scissors
-  m_TagString: Option
+  m_TagString: Scissors
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 258123110}
-  OriginalSlot: {fileID: 655211509}
+  OriginalSlot: {fileID: 118499238}
   setParentAfterDrag: {fileID: 0}
 --- !u!114 &258123110
 MonoBehaviour:
@@ -416,6 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!114 &300160719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,7 +496,7 @@ GameObject:
   - component: {fileID: 325520288}
   m_Layer: 5
   m_Name: Paper
-  m_TagString: Option
+  m_TagString: Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,6 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 424236328}
+  PlayerNumber: 1
 --- !u!114 &347018784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,7 +753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &424236329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -976,6 +982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!1 &678441714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1198,7 @@ GameObject:
   - component: {fileID: 952243736}
   m_Layer: 5
   m_Name: Scissors
-  m_TagString: Option
+  m_TagString: Scissors
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1227,7 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 952243737}
-  OriginalSlot: {fileID: 1580734561}
+  OriginalSlot: {fileID: 1079305898}
   setParentAfterDrag: {fileID: 0}
 --- !u!114 &952243737
 MonoBehaviour:
@@ -1281,7 +1289,7 @@ GameObject:
   - component: {fileID: 960417858}
   m_Layer: 5
   m_Name: Rock
-  m_TagString: Option
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1318,7 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 960417859}
-  OriginalSlot: {fileID: 1079305898}
+  OriginalSlot: {fileID: 1580734561}
   setParentAfterDrag: {fileID: 0}
 --- !u!114 &960417859
 MonoBehaviour:
@@ -1655,6 +1663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!114 &1079305900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,7 +1758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1Scene: {fileID: 1982613136}
   Player2Scene: {fileID: 1799672538}
-  NextTurnButton: {fileID: 424236328}
+  P1ChoiceSpace: {fileID: 347018778}
+  P2ChoiceSpace: {fileID: 1899526193}
 --- !u!4 &1154218463
 Transform:
   m_ObjectHideFlags: 0
@@ -2183,6 +2194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!1 &1453706060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 0}
+  PlayerNumber: 0
 --- !u!114 &1580734563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,7 +2599,7 @@ GameObject:
   - component: {fileID: 1757821111}
   m_Layer: 5
   m_Name: Rock
-  m_TagString: Option
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2659,7 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1757821109}
-  OriginalSlot: {fileID: 118499238}
+  OriginalSlot: {fileID: 655211509}
   setParentAfterDrag: {fileID: 0}
 --- !u!1 &1782868891
 GameObject:
@@ -2675,7 +2690,7 @@ GameObject:
   - component: {fileID: 1782868893}
   m_Layer: 5
   m_Name: Paper
-  m_TagString: Option
+  m_TagString: Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2780,8 +2795,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 49290785}
   - {fileID: 1899526194}
+  - {fileID: 49290785}
   m_Father: {fileID: 997517465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2864,6 +2879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c392856a754c0af41ae70fa30ed86d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnOverButton: {fileID: 424236328}
+  PlayerNumber: 2
 --- !u!114 &1899526197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3083,8 +3100,8 @@ MonoBehaviour:
   m_StartAxis: 1
   m_CellSize: {x: 120, y: 120}
   m_Spacing: {x: 10, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1 &1965609922
 GameObject:
   m_ObjectHideFlags: 0

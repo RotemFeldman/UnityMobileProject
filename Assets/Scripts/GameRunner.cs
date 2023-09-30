@@ -13,14 +13,12 @@ public class GameRunner : MonoBehaviour
     [SerializeField] GameObject P1ChoiceSpace;
     [SerializeField] GameObject P2ChoiceSpace;
 
-
     private GameObject ActivePlayerScene;
 
     private string _P1Choice = "";
     private string _P2Choice = "";
 
-    private int _P1Score;
-    private int _P2Score;
+    private string RoundWinner = "";
 
     private void Awake()
     {
@@ -35,25 +33,73 @@ public class GameRunner : MonoBehaviour
 
     public void NextTurn()
     {
-        _P1Choice = P1ChoiceSpace.transform.GetChild(0).tag;
-
-
-
-
         if (ActivePlayerScene == Player1Scene) 
         {
+            P1ChoiceSpace.GetComponentInChildren<DragAndDrop>().ReturnToOriginalParent();
             Player1Scene.SetActive(false);
             Player2Scene.SetActive(true);
             ActivePlayerScene = Player2Scene;
         } 
         else
         {
+            P2ChoiceSpace.GetComponentInChildren<DragAndDrop>().ReturnToOriginalParent();
             Player2Scene.SetActive(false);
             Player1Scene.SetActive(true);
             ActivePlayerScene = Player1Scene;
+
+            CalculateScores();
+        }
+    }
+
+    void CalculateScores()
+    {
+        if (_P1Choice == "Rock")
+        {
+            if (_P2Choice == "Paper")
+            {
+                RoundWinner = "Player2";
+            }
+            else if (_P2Choice == "Scissors")
+            {
+                RoundWinner = "Player1";
+            }
+            else
+            {
+                RoundWinner = "Draw";
+            }
+        }
+        else if (_P1Choice == "Paper")
+        {
+            if (_P2Choice == "Scissor")
+            {
+                RoundWinner = "Player2";
+            }
+            else if (_P2Choice == "Rock")
+            {
+                RoundWinner = "Player1";
+            }
+            else
+            {
+                RoundWinner = "Draw";
+            }
+        }
+        else if (_P1Choice == "Scissors")
+        {
+            if (_P2Choice == "Rock")
+            {
+                RoundWinner = "Player2";
+            }
+            else if (_P2Choice == "Paper")
+            {
+                RoundWinner = "Player1";
+            }
+            else
+            {
+                RoundWinner = "Draw";
+            }
         }
 
-
+        Debug.Log(RoundWinner);
     }
 
     public void PlayerChoice(int plrNum, string choiceName)
