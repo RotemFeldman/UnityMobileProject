@@ -77,6 +77,11 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void ReturnToOriginalParent()
     {
+        if (OriginalSlot.transform.childCount > 0)
+        {
+            OriginalSlot.transform.GetChild(0).GetComponent<DragAndDrop>().ReturnToOriginalParent();
+        }
+
         transform.SetParent(OriginalSlot);
     }
 
@@ -84,7 +89,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (image == null)
         {
-            image = this.GetComponent<Image>();
+            image = GetComponent<Image>();
         }
 
         if (OriginalSlot == null)

@@ -6,6 +6,28 @@ using DG.Tweening;
 
 public class DropHandler : MonoBehaviour, IDropHandler
 {
+
+    public GameObject TurnOverButton;
+
+    public int PlayerNumber;
+
+    private string PlayerChoice;
+
+    private void Update()
+    {
+        if (TurnOverButton != null)
+        {
+            if (transform.childCount > 0)
+            {
+                TurnOverButton.SetActive(true);
+            }
+            else
+            {
+                TurnOverButton.SetActive(false);
+            }
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         /*if (GamePause.IsPaused)
@@ -25,13 +47,18 @@ public class DropHandler : MonoBehaviour, IDropHandler
             if (dd.transform.parent == dd.OriginalSlot)
                 return;
             else
-                dd.ReturnToOriginalParent();
-            
+                dd.ReturnToOriginalParent();            
         }
+
 
         GameObject droppedObj = eventData.pointerDrag;
         DragAndDrop dragAndDrop = droppedObj.GetComponent<DragAndDrop>();
         dragAndDrop.setParentAfterDrag = transform;
+
+        PlayerChoice = droppedObj.tag;
+
+
+        GameRunner.instance.PlayerChoice(PlayerNumber, PlayerChoice);
 
     }
 }
