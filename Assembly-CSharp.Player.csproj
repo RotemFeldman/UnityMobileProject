@@ -58,9 +58,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AdsScripts\InterstitalAds.cs" />
     <Compile Include="Assets\Scripts\UITween.cs" />
     <Compile Include="Assets\Scripts\Managares\UIManager.cs" />
     <Compile Include="Assets\Scripts\GamePause.cs" />
+    <Compile Include="Assets\Scripts\AdsScripts\AdsInitializer.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayButtonTween.cs" />
     <Compile Include="Assets\Scripts\DropHandler.cs" />
@@ -695,6 +697,9 @@
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AdaptivePerformance">
       <HintPath>Library\ScriptAssemblies\Unity.AdaptivePerformance.dll</HintPath>
