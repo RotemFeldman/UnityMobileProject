@@ -70,7 +70,7 @@ public class GameRunner : MonoBehaviour
         }
         else if (_P1Choice == "Paper")
         {
-            if (_P2Choice == "Scissor")
+            if (_P2Choice == "Scissors")
             {
                 RoundWinner = "Player2";
             }
