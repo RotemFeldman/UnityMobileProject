@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameRunner : MonoBehaviour
 {
-
     public static GameRunner instance;
 
     [SerializeField] GameObject Player1Scene;
@@ -17,6 +16,8 @@ public class GameRunner : MonoBehaviour
 
     private string _P1Choice = "";
     private string _P2Choice = "";
+
+    private int _roundNumber = 0;
 
     private string RoundWinner = "";
 
