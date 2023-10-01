@@ -15,6 +15,9 @@ public class DropHandler : MonoBehaviour, IDropHandler
 
     private void Update()
     {
+        if (GamePause.IsPaused)
+            return;
+
         if (TurnOverButton != null)
         {
             if (transform.childCount > 0)
@@ -30,6 +33,8 @@ public class DropHandler : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        if (GamePause.IsPaused)
+            return;
         /*if (GamePause.IsPaused)
             return;
 

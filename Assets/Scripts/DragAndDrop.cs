@@ -54,6 +54,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (GamePause.IsPaused)
+            return;
         // rememeber what the object is hovering above
         setParentAfterDrag = transform.parent;
 
@@ -66,17 +68,26 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (GamePause.IsPaused)
+            return;
+
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (GamePause.IsPaused)
+            return;
+
         transform.SetParent(setParentAfterDrag);
         image.raycastTarget = true;
     }
 
     public void ReturnToOriginalParent()
     {
+        if (GamePause.IsPaused)
+            return;
+
         if (OriginalSlot.transform.childCount > 0)
         {
             OriginalSlot.transform.GetChild(0).GetComponent<DragAndDrop>().ReturnToOriginalParent();
@@ -87,6 +98,9 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void OnValidate()
     {
+        if (GamePause.IsPaused)
+            return;
+
         if (image == null)
         {
             image = GetComponent<Image>();
