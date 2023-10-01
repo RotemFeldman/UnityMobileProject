@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
+
+    public static int ThemeId;
 
     public GameObject ThemeSelectPanel;
     public GameObject MainMenuPanel;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     public void ThemeSelecter()
     {
@@ -19,6 +28,11 @@ public class UIManager : MonoBehaviour
     {
         ThemeSelectPanel.SetActive(false);
         MainMenuPanel.SetActive(true);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void StartGame()
