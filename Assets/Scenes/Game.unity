@@ -1804,6 +1804,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThemeSelectPanel: {fileID: 0}
   MainMenuPanel: {fileID: 0}
+  _rock: {fileID: 1757821106}
+  _paper: {fileID: 1782868891}
+  _scissors: {fileID: 258123107}
+  _rock2: {fileID: 960417856}
+  _paper2: {fileID: 325520286}
+  _scissors2: {fileID: 952243734}
 --- !u!1 &1196463894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2866,7 +2872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1812256363
