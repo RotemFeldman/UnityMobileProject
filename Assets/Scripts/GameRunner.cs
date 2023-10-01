@@ -17,8 +17,6 @@ public class GameRunner : MonoBehaviour
     private string _P1Choice = "";
     private string _P2Choice = "";
 
-    private int _roundNumber = 0;
-
     private string RoundWinner = "";
 
     private void Awake()
