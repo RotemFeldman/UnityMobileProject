@@ -121,4 +121,9 @@ public class GameRunner : MonoBehaviour
             _P2Choice = choiceName;
         }
     }
+
+    public void Continue()
+    {
+        WinnerPannel.SetActive(false);
+    }
 }
