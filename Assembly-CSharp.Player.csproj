@@ -60,10 +60,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AdsScripts\InterstitalAds.cs" />
     <Compile Include="Assets\Scripts\UITween.cs" />
-    <Compile Include="Assets\Scripts\Managares\UIManager.cs" />
     <Compile Include="Assets\Scripts\GamePause.cs" />
     <Compile Include="Assets\Scripts\AdsScripts\AdsInitializer.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\GameRunner.cs" />
     <Compile Include="Assets\Scripts\PlayButtonTween.cs" />
     <Compile Include="Assets\Scripts\DropHandler.cs" />
     <Compile Include="Assets\Scripts\DragAndDrop.cs" />
