@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameRunner : MonoBehaviour
@@ -11,6 +12,9 @@ public class GameRunner : MonoBehaviour
 
     [SerializeField] GameObject P1ChoiceSpace;
     [SerializeField] GameObject P2ChoiceSpace;
+
+    [SerializeField] GameObject WinnerPannel;
+    [SerializeField] TextMeshProUGUI WinnerText;
 
     private GameObject ActivePlayerScene;
 
@@ -47,6 +51,11 @@ public class GameRunner : MonoBehaviour
             ActivePlayerScene = Player1Scene;
 
             CalculateScores();
+            WinnerPannel.SetActive(true);
+            if (RoundWinner != "Draw")
+                WinnerText.text = $"{RoundWinner} WON!";
+            else
+                WinnerText.text = "ITS A DRAW!";
         }
     }
 
@@ -56,11 +65,11 @@ public class GameRunner : MonoBehaviour
         {
             if (_P2Choice == "Paper")
             {
-                RoundWinner = "Player2";
+                RoundWinner = "Red Player";
             }
             else if (_P2Choice == "Scissors")
             {
-                RoundWinner = "Player1";
+                RoundWinner = "Blue Player";
             }
             else
             {
@@ -71,11 +80,11 @@ public class GameRunner : MonoBehaviour
         {
             if (_P2Choice == "Scissors")
             {
-                RoundWinner = "Player2";
+                RoundWinner = "Red Player";
             }
             else if (_P2Choice == "Rock")
             {
-                RoundWinner = "Player1";
+                RoundWinner = "Blue Player";
             }
             else
             {
@@ -86,11 +95,11 @@ public class GameRunner : MonoBehaviour
         {
             if (_P2Choice == "Rock")
             {
-                RoundWinner = "Player2";
+                RoundWinner = "Red Player";
             }
             else if (_P2Choice == "Paper")
             {
-                RoundWinner = "Player1";
+                RoundWinner = "Blue Player";
             }
             else
             {
@@ -98,7 +107,7 @@ public class GameRunner : MonoBehaviour
             }
         }
 
-        Debug.Log(RoundWinner);
+        //Debug.Log(RoundWinner);
     }
 
     public void PlayerChoice(int plrNum, string choiceName)
@@ -112,5 +121,4 @@ public class GameRunner : MonoBehaviour
             _P2Choice = choiceName;
         }
     }
-
 }
