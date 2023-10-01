@@ -2124,6 +2124,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1523331164}
     m_Modifications:
+    - target: {fileID: 2467370357839380439, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 723914509}
+    - target: {fileID: 2467370357839380439, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2467370357839380439, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2992319799018353172, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_Name
       value: SelectTheme
@@ -2142,19 +2154,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2194,11 +2206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1069.2
+      value: -137.4
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -267.4
+      value: -0.0000076294
       objectReference: {fileID: 0}
     - target: {fileID: 5838136136378082077, guid: 308451ba8df5b1d409605923e044b4a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
