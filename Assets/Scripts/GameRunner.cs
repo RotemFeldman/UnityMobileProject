@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameRunner : MonoBehaviour
 {
@@ -51,11 +52,21 @@ public class GameRunner : MonoBehaviour
             ActivePlayerScene = Player1Scene;
 
             CalculateScores();
+
             WinnerPannel.SetActive(true);
             if (RoundWinner != "Draw")
-                WinnerText.text = $"{RoundWinner} WON!";
+            {
+                if (RoundWinner == "Blue Player")
+                    WinnerText.DOColor(new Color32(0, 0, 255, 255), 1f);
+                else if (RoundWinner == "Red Player")
+                    WinnerText.DOColor(new Color32(255, 0, 0, 255), 1f);
+
+                WinnerText.text = $"{RoundWinner} WINS!";
+            }
             else
-                WinnerText.text = "ITS A DRAW!";
+            {
+                WinnerText.text = "IT'S A DRAW!";
+            }
         }
     }
 
@@ -125,5 +136,6 @@ public class GameRunner : MonoBehaviour
     public void Continue()
     {
         WinnerPannel.SetActive(false);
+        WinnerText.color = Color.white;
     }
 }

@@ -128,9 +128,9 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void QuitGame()
+    public void Credits()
     {
-        Application.Quit();
+        SceneManager.LoadScene(2);
     }
 
 }

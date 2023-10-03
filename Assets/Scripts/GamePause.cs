@@ -25,4 +25,12 @@ public class GamePause : MonoBehaviour
         }
             
     }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            SetPause(true);
+        }
+    }
 }
