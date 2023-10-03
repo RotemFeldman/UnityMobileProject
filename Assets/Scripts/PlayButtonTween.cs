@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class PlayButtonTween : MonoBehaviour
 {
-    [SerializeField] private RectTransform[] _infoBars;
-
-    private void Awake()
+    private void Start()
     {
-        transform.DOScale(1.5f, 1).SetLoops(-1, LoopType.Yoyo);
+        if (gameObject != null)
+        {
+            transform.DOScale(1.5f, 1).SetLoops(-1, LoopType.Yoyo);
+        }
     }
 }
